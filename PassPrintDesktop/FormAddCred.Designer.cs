@@ -52,43 +52,51 @@
             // 
             // txtAccountName
             // 
-            this.txtAccountName.Font = new System.Drawing.Font("Arial Unicode MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccountName.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccountName.ForeColor = System.Drawing.Color.DarkGray;
             this.txtAccountName.Location = new System.Drawing.Point(383, 121);
             this.txtAccountName.Name = "txtAccountName";
-            this.txtAccountName.Size = new System.Drawing.Size(465, 50);
+            this.txtAccountName.Size = new System.Drawing.Size(465, 45);
             this.txtAccountName.TabIndex = 3;
+            this.txtAccountName.Text = "e.g., gmail.com, yahoo.com, etc...";
+            this.txtAccountName.Enter += new System.EventHandler(this.txtAccountName_Enter);
+            this.txtAccountName.Leave += new System.EventHandler(this.txtAccountName_Leave);
             // 
             // txtUsername
             // 
-            this.txtUsername.Font = new System.Drawing.Font("Arial Unicode MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.DarkGray;
             this.txtUsername.Location = new System.Drawing.Point(383, 196);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(465, 50);
+            this.txtUsername.Size = new System.Drawing.Size(465, 45);
             this.txtUsername.TabIndex = 4;
+            this.txtUsername.Text = "someone@example.com";
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // txtPassword
             // 
-            this.txtPassword.Font = new System.Drawing.Font("Arial Unicode MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(383, 273);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(465, 50);
+            this.txtPassword.PasswordChar = '•';
+            this.txtPassword.Size = new System.Drawing.Size(465, 45);
             this.txtPassword.TabIndex = 5;
             // 
             // txtPasswordConfirm
             // 
-            this.txtPasswordConfirm.Font = new System.Drawing.Font("Arial Unicode MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPasswordConfirm.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasswordConfirm.Location = new System.Drawing.Point(383, 349);
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
-            this.txtPasswordConfirm.PasswordChar = '*';
-            this.txtPasswordConfirm.Size = new System.Drawing.Size(465, 50);
+            this.txtPasswordConfirm.PasswordChar = '•';
+            this.txtPasswordConfirm.Size = new System.Drawing.Size(465, 45);
             this.txtPasswordConfirm.TabIndex = 6;
             // 
             // lblAccountName
             // 
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountName.Location = new System.Drawing.Point(100, 129);
+            this.lblAccountName.Location = new System.Drawing.Point(100, 125);
             this.lblAccountName.Name = "lblAccountName";
             this.lblAccountName.Size = new System.Drawing.Size(258, 37);
             this.lblAccountName.TabIndex = 7;
@@ -98,7 +106,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(194, 204);
+            this.lblUsername.Location = new System.Drawing.Point(194, 200);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(164, 37);
             this.lblUsername.TabIndex = 8;
@@ -108,7 +116,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(200, 281);
+            this.lblPassword.Location = new System.Drawing.Point(200, 277);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(158, 37);
             this.lblPassword.TabIndex = 9;
@@ -118,7 +126,7 @@
             // 
             this.lblPasswordConfirm.AutoSize = true;
             this.lblPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordConfirm.Location = new System.Drawing.Point(78, 357);
+            this.lblPasswordConfirm.Location = new System.Drawing.Point(78, 353);
             this.lblPasswordConfirm.Name = "lblPasswordConfirm";
             this.lblPasswordConfirm.Size = new System.Drawing.Size(280, 37);
             this.lblPasswordConfirm.TabIndex = 10;
