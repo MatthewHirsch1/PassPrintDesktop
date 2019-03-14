@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PassPrintDesktop
 {
-    public partial class FormMainMenu : Form
+    public partial class FormSuccess : Form
     {
-        public FormMainMenu()
+        public FormSuccess()
         {
             InitializeComponent();
         }
