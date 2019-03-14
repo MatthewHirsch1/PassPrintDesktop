@@ -64,6 +64,12 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuccess.Designer.cs">
+      <DependentUpon>FormSuccess.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAddCred.resx">
