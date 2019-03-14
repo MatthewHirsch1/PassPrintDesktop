@@ -95,8 +95,9 @@
             this.btnAddCred.Name = "btnAddCred";
             this.btnAddCred.Size = new System.Drawing.Size(490, 75);
             this.btnAddCred.TabIndex = 4;
-            this.btnAddCred.Text = "Add Credentials";
+            this.btnAddCred.Text = "Add Credential";
             this.btnAddCred.UseVisualStyleBackColor = true;
+            this.btnAddCred.Click += new System.EventHandler(this.btnAddCred_Click);
             // 
             // btnEditDelCred
             // 
@@ -107,12 +108,13 @@
             this.btnEditDelCred.TabIndex = 5;
             this.btnEditDelCred.Text = "Edit / Delete Credentials";
             this.btnEditDelCred.UseVisualStyleBackColor = true;
+            this.btnEditDelCred.Click += new System.EventHandler(this.btnEditDelCred_Click);
             // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 568);
+            this.ClientSize = new System.Drawing.Size(856, 611);
             this.Controls.Add(this.btnEditDelCred);
             this.Controls.Add(this.btnAddCred);
             this.Controls.Add(this.btnRemoveFP);
@@ -120,7 +122,7 @@
             this.Controls.Add(this.lblMainMenu);
             this.Controls.Add(this.lblWelcome);
             this.Name = "FormMainMenu";
-            this.Text = "Form1";
+            this.Text = "PassPrint Menu";
             this.ResumeLayout(false);
             this.PerformLayout();
 

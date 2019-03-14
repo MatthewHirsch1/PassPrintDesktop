@@ -15,6 +15,16 @@ namespace PassPrintDesktop
         public FormMainMenu()
         {
             InitializeComponent();
-        }   
+        }
+
+        private void btnAddCred_Click(object sender, EventArgs e)
+        {
+            new FormAddCred().Show();
+        }
+
+        private void btnEditDelCred_Click(object sender, EventArgs e)
+        {
+            new FormEditDelCred().Show();
+        }
     }
 }
