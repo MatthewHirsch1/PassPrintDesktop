@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO.Ports;
 
 namespace PassPrintDesktop
 {
@@ -16,15 +17,8 @@ namespace PassPrintDesktop
         {
             InitializeComponent();
             this.Select();
-            //while (true)
-            //{
-            //    try { // Try to open serial port for Bluetooth connection
-            //        serialBluetooth.Open();
-            //        break; }
-            //    catch (Exception) { MessageBox.Show("Please connect the device via Bluetooth and try again.", "Connection Error"); }
-            //}
-
-            }
+            Variables.serialBluetooth.Open();
+        }
 
         private void btnAddCred_Click(object sender, EventArgs e)
         {

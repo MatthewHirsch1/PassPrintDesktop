@@ -141,6 +141,7 @@
             this.btnOKAddCred.TabIndex = 11;
             this.btnOKAddCred.Text = "OK";
             this.btnOKAddCred.UseVisualStyleBackColor = true;
+            this.btnOKAddCred.Click += new System.EventHandler(this.btnOKAddCred_Click);
             // 
             // FormAddCred
             // 

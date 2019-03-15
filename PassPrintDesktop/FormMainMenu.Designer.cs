@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.serialBluetooth = new System.IO.Ports.SerialPort(this.components);
             this.lblWelcome = new System.Windows.Forms.Label();
             this.lblMainMenu = new System.Windows.Forms.Label();
             this.btnAddFP = new System.Windows.Forms.Button();
@@ -37,12 +35,6 @@
             this.btnAddCred = new System.Windows.Forms.Button();
             this.btnEditDelCred = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // serialBluetooth
-            // 
-            this.serialBluetooth.PortName = "COM4";
-            this.serialBluetooth.ReadTimeout = 1500;
-            this.serialBluetooth.WriteTimeout = 1500;
             // 
             // lblWelcome
             // 
@@ -134,8 +126,6 @@
         }
 
         #endregion
-
-        public System.IO.Ports.SerialPort serialBluetooth;
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.Label lblMainMenu;
         private System.Windows.Forms.Button btnAddFP;
