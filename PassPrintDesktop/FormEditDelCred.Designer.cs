@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblManageCreds = new System.Windows.Forms.Label();
             this.dataGridViewCreds = new System.Windows.Forms.DataGridView();
             this.colAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,20 +74,22 @@
             this.colPassword,
             this.colSave,
             this.colDelete});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewCreds.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewCreds.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCreds.Location = new System.Drawing.Point(12, 96);
             this.dataGridViewCreds.Name = "dataGridViewCreds";
             this.dataGridViewCreds.RowTemplate.Height = 28;
             this.dataGridViewCreds.Size = new System.Drawing.Size(1156, 639);
             this.dataGridViewCreds.TabIndex = 11;
             this.dataGridViewCreds.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCreds_CellContentClick);
+            this.dataGridViewCreds.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCreds_CellFormatting);
+            this.dataGridViewCreds.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridViewCreds_EditingControlShowing);
             // 
             // colAccount
             // 
@@ -105,17 +108,19 @@
             // colPassword
             // 
             this.colPassword.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            dataGridViewCellStyle2.NullValue = null;
+            this.colPassword.DefaultCellStyle = dataGridViewCellStyle2;
             this.colPassword.HeaderText = "Password";
             this.colPassword.Name = "colPassword";
             this.colPassword.Width = 163;
             // 
             // colSave
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.colSave.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.YellowGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.colSave.DefaultCellStyle = dataGridViewCellStyle3;
             this.colSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.colSave.HeaderText = "Save";
             this.colSave.Name = "colSave";
@@ -125,10 +130,10 @@
             // 
             // colDelete
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Tomato;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.colDelete.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Tomato;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.colDelete.DefaultCellStyle = dataGridViewCellStyle4;
             this.colDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.colDelete.HeaderText = "Delete";
             this.colDelete.Name = "colDelete";
