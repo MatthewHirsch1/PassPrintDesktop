@@ -36,8 +36,9 @@
             this.lblAccountName = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
-            this.lblPasswordConfirm = new System.Windows.Forms.Label();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.btnOKAddCred = new System.Windows.Forms.Button();
+            this.lblRequiredFields = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAddCred
@@ -122,20 +123,20 @@
             this.lblPassword.TabIndex = 9;
             this.lblPassword.Text = "Password";
             // 
-            // lblPasswordConfirm
+            // lblConfirmPassword
             // 
-            this.lblPasswordConfirm.AutoSize = true;
-            this.lblPasswordConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordConfirm.Location = new System.Drawing.Point(78, 353);
-            this.lblPasswordConfirm.Name = "lblPasswordConfirm";
-            this.lblPasswordConfirm.Size = new System.Drawing.Size(280, 37);
-            this.lblPasswordConfirm.TabIndex = 10;
-            this.lblPasswordConfirm.Text = "Confirm Password";
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(78, 353);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(280, 37);
+            this.lblConfirmPassword.TabIndex = 10;
+            this.lblConfirmPassword.Text = "Confirm Password";
             // 
             // btnOKAddCred
             // 
             this.btnOKAddCred.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOKAddCred.Location = new System.Drawing.Point(383, 444);
+            this.btnOKAddCred.Location = new System.Drawing.Point(383, 468);
             this.btnOKAddCred.Name = "btnOKAddCred";
             this.btnOKAddCred.Size = new System.Drawing.Size(178, 82);
             this.btnOKAddCred.TabIndex = 11;
@@ -143,13 +144,24 @@
             this.btnOKAddCred.UseVisualStyleBackColor = true;
             this.btnOKAddCred.Click += new System.EventHandler(this.btnOKAddCred_Click);
             // 
+            // lblRequiredFields
+            // 
+            this.lblRequiredFields.AutoSize = true;
+            this.lblRequiredFields.Font = new System.Drawing.Font("Arial Unicode MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRequiredFields.ForeColor = System.Drawing.Color.Red;
+            this.lblRequiredFields.Location = new System.Drawing.Point(256, 413);
+            this.lblRequiredFields.Name = "lblRequiredFields";
+            this.lblRequiredFields.Size = new System.Drawing.Size(0, 43);
+            this.lblRequiredFields.TabIndex = 12;
+            // 
             // FormAddCred
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 599);
+            this.Controls.Add(this.lblRequiredFields);
             this.Controls.Add(this.btnOKAddCred);
-            this.Controls.Add(this.lblPasswordConfirm);
+            this.Controls.Add(this.lblConfirmPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblAccountName);
@@ -175,7 +187,8 @@
         private System.Windows.Forms.Label lblAccountName;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblPasswordConfirm;
+        private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Button btnOKAddCred;
+        private System.Windows.Forms.Label lblRequiredFields;
     }
 }

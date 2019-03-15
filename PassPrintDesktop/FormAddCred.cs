@@ -57,17 +57,37 @@ namespace PassPrintDesktop
 
         private void btnOKAddCred_Click(object sender, EventArgs e)
         {
+            // If any of the four text boxes are empty, inform user
+            if (txtAccountName.Text == "e.g., gmail.com, yahoo.com, etc..." || txtUsername.Text == "someone@example.com" || txtPassword.Text == "" || txtPasswordConfirm.Text == "")
+            {
+                if (!lblAccountName.Text.Contains("*")) { lblAccountName.Text += "*"; }
+                if (!lblUsername.Text.Contains("*")) { lblUsername.Text += "*"; }
+                if (!lblPassword.Text.Contains("*")) { lblPassword.Text += "*"; }
+                if (!lblConfirmPassword.Text.Contains("*")) { lblConfirmPassword.Text += "*"; }
+                lblRequiredFields.Text = "Please fill in all required (*) fields";
+                return;
+            }
+
             String pwd = txtPassword.Text;
             String confirmPwd = txtPasswordConfirm.Text;
-            if (pwd.Equals(confirmPwd))
+            if (pwd.Equals(confirmPwd)) // If passwords match, proceed
             {
+                String siteName = txtAccountName.Text;
+                String userName = txtUsername.Text;
+
                 // TO-DO: Need to encrypt uname and pwd before sending over to Arduino
+                // TO-DO: Pop up Success or Failure Form for result of FP Auth
+                // TO-DO: Remove Asterisk (*) from the 4 labels' Text elements after Auth is done
+                // TO-DO: reset lblRequiredFields after Auth is done
+
                 Variables.serialBluetooth.Write("Adding Credentials%");
-                Variables.serialBluetooth.Write("Testing comm");
+                Variables.serialBluetooth.Write(siteName + "," + userName + "," + pwd + ",");
                 String incData = Variables.serialBluetooth.ReadLine();
                 MessageBox.Show(incData, "From BT through Variables class");
+                // Close form once adding credential is complete
+                this.Close();
             } 
-            else // If password was not confirmed
+            else // If password was not confirmed, prevent user from proceeding until it matches
             {
                 MessageBox.Show("Please confirm your password. \nPasswords did not match.", "Password Confirmation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
