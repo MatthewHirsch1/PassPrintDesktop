@@ -171,7 +171,7 @@
             this.Controls.Add(this.txtAccountName);
             this.Controls.Add(this.lblAddCred);
             this.Name = "FormAddCred";
-            this.Text = "FormAddCred";
+            this.Text = "PassPrint";
             this.ResumeLayout(false);
             this.PerformLayout();
 

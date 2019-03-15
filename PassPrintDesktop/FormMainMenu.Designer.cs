@@ -34,6 +34,7 @@
             this.btnRemoveFP = new System.Windows.Forms.Button();
             this.btnAddCred = new System.Windows.Forms.Button();
             this.btnEditDelCred = new System.Windows.Forms.Button();
+            this.btnConnectBT = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -106,11 +107,23 @@
             this.btnEditDelCred.UseVisualStyleBackColor = true;
             this.btnEditDelCred.Click += new System.EventHandler(this.btnEditDelCred_Click);
             // 
+            // btnConnectBT
+            // 
+            this.btnConnectBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnectBT.Location = new System.Drawing.Point(44, 542);
+            this.btnConnectBT.Name = "btnConnectBT";
+            this.btnConnectBT.Size = new System.Drawing.Size(325, 57);
+            this.btnConnectBT.TabIndex = 6;
+            this.btnConnectBT.Text = "Connect Bluetooth";
+            this.btnConnectBT.UseVisualStyleBackColor = true;
+            this.btnConnectBT.Click += new System.EventHandler(this.btnConnectBT_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 642);
+            this.Controls.Add(this.btnConnectBT);
             this.Controls.Add(this.btnEditDelCred);
             this.Controls.Add(this.btnAddCred);
             this.Controls.Add(this.btnRemoveFP);
@@ -119,7 +132,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMainMenu";
-            this.Text = "PassPrint Menu";
+            this.Text = "PassPrint";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +145,7 @@
         private System.Windows.Forms.Button btnRemoveFP;
         private System.Windows.Forms.Button btnAddCred;
         private System.Windows.Forms.Button btnEditDelCred;
+        private System.Windows.Forms.Button btnConnectBT;
     }
 }
 

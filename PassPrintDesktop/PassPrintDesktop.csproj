@@ -76,6 +76,9 @@
     <EmbeddedResource Include="FormAddCred.resx">
       <DependentUpon>FormAddCred.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDelCred.resx">
+      <DependentUpon>FormEditDelCred.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
