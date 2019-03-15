@@ -32,6 +32,8 @@ namespace PassPrintDesktop
         private void btnConnectBT_Click(object sender, EventArgs e)
         { // Click this button to connect to Bluetooth
             Variables.serialBluetooth.Open();
+            lblConnectSuccess.Text = "✓";
+            //btnConnectBT
         }
     }
 }

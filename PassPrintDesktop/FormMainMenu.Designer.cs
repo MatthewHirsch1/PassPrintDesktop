@@ -35,6 +35,7 @@
             this.btnAddCred = new System.Windows.Forms.Button();
             this.btnEditDelCred = new System.Windows.Forms.Button();
             this.btnConnectBT = new System.Windows.Forms.Button();
+            this.lblConnectSuccess = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -118,11 +119,22 @@
             this.btnConnectBT.UseVisualStyleBackColor = true;
             this.btnConnectBT.Click += new System.EventHandler(this.btnConnectBT_Click);
             // 
+            // lblConnectSuccess
+            // 
+            this.lblConnectSuccess.AutoSize = true;
+            this.lblConnectSuccess.BackColor = System.Drawing.Color.YellowGreen;
+            this.lblConnectSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConnectSuccess.Location = new System.Drawing.Point(375, 546);
+            this.lblConnectSuccess.Name = "lblConnectSuccess";
+            this.lblConnectSuccess.Size = new System.Drawing.Size(0, 46);
+            this.lblConnectSuccess.TabIndex = 7;
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 642);
+            this.Controls.Add(this.lblConnectSuccess);
             this.Controls.Add(this.btnConnectBT);
             this.Controls.Add(this.btnEditDelCred);
             this.Controls.Add(this.btnAddCred);
@@ -146,6 +158,7 @@
         private System.Windows.Forms.Button btnAddCred;
         private System.Windows.Forms.Button btnEditDelCred;
         private System.Windows.Forms.Button btnConnectBT;
+        private System.Windows.Forms.Label lblConnectSuccess;
     }
 }
 
