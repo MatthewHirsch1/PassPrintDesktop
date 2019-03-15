@@ -58,7 +58,7 @@ namespace PassPrintDesktop
         private void btnOKAddCred_Click(object sender, EventArgs e)
         {
             // If any of the four text boxes are empty, inform user
-            if (txtAccountName.Text == "e.g., gmail.com, yahoo.com, etc..." || txtUsername.Text == "someone@example.com" || txtPassword.Text == "" || txtPasswordConfirm.Text == "")
+            if ((txtAccountName.Text == "e.g., gmail.com, yahoo.com, etc..." && txtAccountName.ForeColor == Color.DarkGray) || (txtUsername.Text == "someone@example.com" && txtUsername.ForeColor == Color.DarkGray) || txtPassword.Text == "" || txtPasswordConfirm.Text == "")
             {
                 if (!lblAccountName.Text.Contains("*")) { lblAccountName.Text += "*"; }
                 if (!lblUsername.Text.Contains("*")) { lblUsername.Text += "*"; }
