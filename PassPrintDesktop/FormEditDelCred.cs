@@ -12,6 +12,7 @@ namespace PassPrintDesktop
 {
     public partial class FormEditDelCred : Form
     {
+        List<string[]> credList = new List<string[]>(); // Will hold credentials locally for saving changes
         public FormEditDelCred()
         {
             InitializeComponent();
@@ -21,10 +22,17 @@ namespace PassPrintDesktop
             //this.dataGridViewCreds.Rows.Add("ask.com", "bob123@ask.com", "789");
             //this.dataGridViewCreds.Rows.Add("aol.com", "bob123@aol.com", "321");
             //this.dataGridViewCreds.Rows.Add("outlook.com", "bob123@outlook.com", "123456");
+            //Variables.serialBluetooth.ReadExisting();
             Variables.serialBluetooth.Write("Retrieve Credentials%");
-            //while (Variables.serialBluetooth.DataReceived())
+            //string strCreds = "0";
+            //try
             //{
-
+            //    strCreds = Variables.serialBluetooth.ReadLine();
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("You have no credentials to manage.", "No Credentials", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    //this.Close();
             //}
             string strCreds = Variables.serialBluetooth.ReadLine();
             int numCreds = 0;
@@ -34,14 +42,15 @@ namespace PassPrintDesktop
             }
             catch(Exception) { MessageBox.Show("String: " + strCreds, "test"); }
             //string num2 = "";
-            MessageBox.Show("String: " + strCreds + "\nint: " + numCreds, "test");
+            //MessageBox.Show("String: " + strCreds + "\nint: " + numCreds, "test");
             //int num = 1;
             for (int i = 0; i < numCreds; i++)
             {
                 String cred = Variables.serialBluetooth.ReadLine();
-                string[] arrCreds = cred.Split(':');
+                string[] arrCred = cred.Split(':');
+                credList.Add(arrCred); // Add cred to arraylist
                 //MessageBox.Show("Account: " + arrCreds[0] + " Username: " + arrCreds[1] + " Pwd: " + arrCreds[2], "test");
-                this.dataGridViewCreds.Rows.Add(arrCreds[0], arrCreds[1], arrCreds[2]);
+                this.dataGridViewCreds.Rows.Add(arrCred[0], arrCred[1], arrCred[2]);
             }
 
             //String f1 = Variables.serialBluetooth.ReadLine();
@@ -60,8 +69,19 @@ namespace PassPrintDesktop
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
                 if (e.ColumnIndex == 3) { // Save column
-                    MessageBox.Show("Save Changes: Button on row " + e.RowIndex + " clicked\n" + (string)dataGridViewCreds[0, e.RowIndex].Value, "Test Save Changes");
-                    Variables.serialBluetooth.Write("Saving Credential%");
+                    //MessageBox.Show("Save Changes: Button on row " + e.RowIndex + " clicked\n" + (string)dataGridViewCreds[0, e.RowIndex].Value, "Test Save Changes");
+                    string[] cred = credList[e.RowIndex];
+                    //MessageBox.Show("OLD: " + cred[0] + ":" + cred[1] + ":" + cred[2] + ":\n" + "NEW: " + (string)dataGridViewCreds[0, e.RowIndex].Value + ":" + (string)dataGridViewCreds[1, e.RowIndex].Value + ":" + (string)dataGridViewCreds[2, e.RowIndex].Value + ":", "test");
+                    //MessageBox.Show("NEW: " + (string)dataGridViewCreds[0, e.RowIndex].Value + ":" + (string)dataGridViewCreds[0, e.RowIndex].Value + ":" + (string)dataGridViewCreds[0, e.RowIndex].Value + ":", "test");
+
+                    // TO-DO: Need auth FP for action
+                    // TO-DO: Encrypt data before sending to Arduino
+                    Variables.serialBluetooth.Write("Save Credential%");
+                    // Send old credential to be removed from file
+                    Variables.serialBluetooth.Write(cred[0] + ":");
+                    Variables.serialBluetooth.Write(cred[1] + ":");
+                    Variables.serialBluetooth.Write(cred[2] + ":");
+                    // Send new credential to be added to file
                     Variables.serialBluetooth.Write((string)dataGridViewCreds[0, e.RowIndex].Value + ":");
                     Variables.serialBluetooth.Write((string)dataGridViewCreds[1, e.RowIndex].Value + ":");
                     Variables.serialBluetooth.Write((string)dataGridViewCreds[2, e.RowIndex].Value + ":");
@@ -69,7 +89,14 @@ namespace PassPrintDesktop
                 }
                 else // Delete column
                 {
-                    MessageBox.Show("Delete: Button on row " + e.RowIndex + " clicked\n" + senderGrid.Columns, "Test Delete");
+                    // TO-DO: Need auth FP for action
+                    //MessageBox.Show("Delete: Button on row " + e.RowIndex + " clicked\n" + senderGrid.Columns, "Test Delete");
+                    string[] cred = credList[e.RowIndex];
+                    Variables.serialBluetooth.Write("Delete Credential%");
+                    Variables.serialBluetooth.Write(cred[0] + ":");
+                    Variables.serialBluetooth.Write(cred[1] + ":");
+                    Variables.serialBluetooth.Write(cred[2] + ":");
+                    this.dataGridViewCreds.Rows.RemoveAt(e.RowIndex);
                 }
             }
         }

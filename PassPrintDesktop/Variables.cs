@@ -12,8 +12,8 @@ namespace PassPrintDesktop
         // Bluetooth connection to the Arduino
         public static SerialPort serialBluetooth = new SerialPort("COM4", 9600)
         {
-            ReadTimeout = 5000,
-            WriteTimeout = 5000
+            ReadTimeout = 2000,
+            WriteTimeout = 2000
         };
     }
 }

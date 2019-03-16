@@ -57,7 +57,6 @@
             // 
             this.dataGridViewCreds.AllowUserToAddRows = false;
             this.dataGridViewCreds.AllowUserToDeleteRows = false;
-            this.dataGridViewCreds.AllowUserToOrderColumns = true;
             this.dataGridViewCreds.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -96,14 +95,16 @@
             this.colAccount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.colAccount.HeaderText = "Account";
             this.colAccount.Name = "colAccount";
-            this.colAccount.Width = 144;
+            this.colAccount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAccount.Width = 114;
             // 
             // colUsername
             // 
             this.colUsername.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.colUsername.HeaderText = "Username";
             this.colUsername.Name = "colUsername";
-            this.colUsername.Width = 167;
+            this.colUsername.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colUsername.Width = 137;
             // 
             // colPassword
             // 
@@ -112,7 +113,8 @@
             this.colPassword.DefaultCellStyle = dataGridViewCellStyle2;
             this.colPassword.HeaderText = "Password";
             this.colPassword.Name = "colPassword";
-            this.colPassword.Width = 163;
+            this.colPassword.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPassword.Width = 133;
             // 
             // colSave
             // 

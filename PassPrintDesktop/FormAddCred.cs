@@ -80,10 +80,12 @@ namespace PassPrintDesktop
                 // TO-DO: Remove Asterisk (*) from the 4 labels' Text elements after Auth is done
                 // TO-DO: reset lblRequiredFields after Auth is done
 
-                Variables.serialBluetooth.Write("Adding Credentials%");
-                Variables.serialBluetooth.Write(siteName + "," + userName + "," + pwd + ",");
-                String incData = Variables.serialBluetooth.ReadLine();
-                MessageBox.Show(incData, "From BT through Variables class");
+                Variables.serialBluetooth.Write("Add Credential%");
+                Variables.serialBluetooth.Write(siteName + ":");
+                Variables.serialBluetooth.Write(userName + ":");
+                Variables.serialBluetooth.Write(pwd + ":");
+                //String incData = Variables.serialBluetooth.ReadLine();
+                //MessageBox.Show(incData, "From BT through Variables class");
                 // Close form once adding credential is complete
                 this.Close();
             } 
