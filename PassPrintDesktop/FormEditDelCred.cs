@@ -26,10 +26,15 @@ namespace PassPrintDesktop
             //{
 
             //}
-            int numCreds = Int32.Parse(Variables.serialBluetooth.ReadLine());
-            //int num = Int32.Parse(numCreds);
+            string strCreds = Variables.serialBluetooth.ReadLine();
+            int numCreds = 0;
+            try
+            {
+                numCreds = Int32.Parse(strCreds);
+            }
+            catch(Exception) { MessageBox.Show("String: " + strCreds, "test"); }
             //string num2 = "";
-            //MessageBox.Show("String: " + numCreds + "\nint: " + num, "test");
+            MessageBox.Show("String: " + strCreds + "\nint: " + numCreds, "test");
             //int num = 1;
             for (int i = 0; i < numCreds; i++)
             {
@@ -54,8 +59,13 @@ namespace PassPrintDesktop
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                if (e.ColumnIndex == 3) { // Save changes column
+                if (e.ColumnIndex == 3) { // Save column
                     MessageBox.Show("Save Changes: Button on row " + e.RowIndex + " clicked\n" + (string)dataGridViewCreds[0, e.RowIndex].Value, "Test Save Changes");
+                    Variables.serialBluetooth.Write("Saving Credential%");
+                    Variables.serialBluetooth.Write((string)dataGridViewCreds[0, e.RowIndex].Value + ":");
+                    Variables.serialBluetooth.Write((string)dataGridViewCreds[1, e.RowIndex].Value + ":");
+                    Variables.serialBluetooth.Write((string)dataGridViewCreds[2, e.RowIndex].Value + ":");
+
                 }
                 else // Delete column
                 {
@@ -68,14 +78,6 @@ namespace PassPrintDesktop
         {
             if (e.ColumnIndex == 2)
             {
-                //{
-                //    if (e.Value != null)
-                //    {
-                //        e.Value = new string('\u25CF', e.Value.ToString().Length);
-                //    }
-                //    else { e.Value = "Null"; }
-                //}
-
                 dataGridViewCreds.Rows[e.RowIndex].Tag = e.Value;
                 e.Value = new String('\u25CF', e.Value.ToString().Length);
             }     
