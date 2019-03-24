@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddCred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCred.Designer.cs">
+      <DependentUpon>FormAddCred.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditDelCred.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditDelCred.Designer.cs">
+      <DependentUpon>FormEditDelCred.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +72,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Variables.cs" />
+    <EmbeddedResource Include="FormAddCred.resx">
+      <DependentUpon>FormAddCred.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditDelCred.resx">
+      <DependentUpon>FormEditDelCred.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
