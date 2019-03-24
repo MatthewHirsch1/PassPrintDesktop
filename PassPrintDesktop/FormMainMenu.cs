@@ -35,5 +35,10 @@ namespace PassPrintDesktop
             lblConnectSuccess.Text = "✓";
             //btnConnectBT
         }
+
+        private void btnAddFP_Click(object sender, EventArgs e)
+        {
+            new AddFP().Show();
+        }
     }
 }
