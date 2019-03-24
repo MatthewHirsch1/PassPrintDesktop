@@ -34,6 +34,7 @@ namespace PassPrintDesktop
             Variables.serialBluetooth.Open();
             lblConnectSuccess.Text = "✓";
             //btnConnectBT
+
         }
     }
 }

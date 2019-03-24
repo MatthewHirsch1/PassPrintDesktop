@@ -57,7 +57,7 @@
             this.lblMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMainMenu.Location = new System.Drawing.Point(276, 122);
             this.lblMainMenu.Name = "lblMainMenu";
-            this.lblMainMenu.Size = new System.Drawing.Size(262, 48);
+            this.lblMainMenu.Size = new System.Drawing.Size(233, 38);
             this.lblMainMenu.TabIndex = 1;
             this.lblMainMenu.Text = "Main Menu";
             this.lblMainMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,7 +68,7 @@
             this.btnAddFP.Location = new System.Drawing.Point(161, 172);
             this.btnAddFP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddFP.Name = "btnAddFP";
-            this.btnAddFP.Size = new System.Drawing.Size(490, 75);
+            this.btnAddFP.Size = new System.Drawing.Size(436, 60);
             this.btnAddFP.TabIndex = 2;
             this.btnAddFP.Text = "Add a Fingerprint";
             this.btnAddFP.UseVisualStyleBackColor = true;
@@ -79,7 +79,7 @@
             this.btnRemoveFP.Location = new System.Drawing.Point(161, 254);
             this.btnRemoveFP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveFP.Name = "btnRemoveFP";
-            this.btnRemoveFP.Size = new System.Drawing.Size(490, 75);
+            this.btnRemoveFP.Size = new System.Drawing.Size(436, 60);
             this.btnRemoveFP.TabIndex = 3;
             this.btnRemoveFP.Text = "Remove a Fingerprint";
             this.btnRemoveFP.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             this.btnAddCred.Location = new System.Drawing.Point(161, 335);
             this.btnAddCred.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCred.Name = "btnAddCred";
-            this.btnAddCred.Size = new System.Drawing.Size(490, 75);
+            this.btnAddCred.Size = new System.Drawing.Size(436, 60);
             this.btnAddCred.TabIndex = 4;
             this.btnAddCred.Text = "Add Credential";
             this.btnAddCred.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.btnEditDelCred.Location = new System.Drawing.Point(161, 416);
             this.btnEditDelCred.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditDelCred.Name = "btnEditDelCred";
-            this.btnEditDelCred.Size = new System.Drawing.Size(490, 75);
+            this.btnEditDelCred.Size = new System.Drawing.Size(436, 60);
             this.btnEditDelCred.TabIndex = 5;
             this.btnEditDelCred.Text = "Edit / Delete Credentials";
             this.btnEditDelCred.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 642);
             this.Controls.Add(this.lblConnectSuccess);
