@@ -31,6 +31,7 @@ namespace PassPrintDesktop
 
 
             Variables.serialBluetooth.Write("Choose Fingerprint%");
+            // TO-DO: Add feedback so user knows to lift finger for adding FP
             if (finger_select == "Left Thumb")
                 Variables.serialBluetooth.Write("1%");
             else if (finger_select == "Left Index")

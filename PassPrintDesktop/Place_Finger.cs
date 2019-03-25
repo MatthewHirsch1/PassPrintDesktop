@@ -11,7 +11,6 @@ using System.Windows.Forms;
 namespace PassPrintDesktop
 {
     public partial class Place_Finger : Form
-
     {
 
         public static bool fingerOK;
@@ -22,15 +21,16 @@ namespace PassPrintDesktop
             fingerOK = false;
         }
 
-        
+
 
         private void Begin_Click(object sender, EventArgs e)
         {
             fingerOK = Variables.authenticatefunc();
-            if (fingerOK) {
+            if (fingerOK)
+            {
                 this.Close();
                 //return Variables.authenticatefunc();
-                
+
             } // handle false case
 
             //return Variables.authenticatefunc();

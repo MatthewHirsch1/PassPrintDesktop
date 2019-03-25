@@ -82,34 +82,41 @@ namespace PassPrintDesktop
                 // TO-DO: reset lblRequiredFields after Auth is done
 
 
-                new Place_Finger().Show();// Authenticate action
-                                          //bool fingerOK = Place_Finger.Begin_Click();
+                //new Place_Finger().Show();// Authenticate action
+                //bool fingerOK = Place_Finger.Begin_Click();
 
-                int milliseconds = 2000;
-                Thread.Sleep(milliseconds);
+                //int milliseconds = 2000;
+                //Thread.Sleep(milliseconds);
                 //using (var form = new Place_Finger())
                 //{
                 //    bool fingerOK = form.fingerOK''
                 //}
 
-                while (!Place_Finger.fingerOK) // not accounting for bad fingerprint
-                    // code only proceeds if good fingerprint
+                using (Place_Finger form = new Place_Finger())
                 {
-                    if (Place_Finger.fingerOK)
-                    {
-
-                        Variables.serialBluetooth.Write("Add Credential%");
-                        Variables.serialBluetooth.Write(siteName + ":");
-                        Variables.serialBluetooth.Write(userName + ":");
-                        Variables.serialBluetooth.Write(pwd + ":");
-                        //String incData = Variables.serialBluetooth.ReadLine();
-                        //MessageBox.Show(incData, "From BT through Variables class");
-                        // Close form once adding credential is complete
-                        this.Close();
-                        break;
-                    } // TO-DO: add else clause for fingerprint auth failing
+                    Place_Finger.fingerOK = false;
+                    form.ShowDialog();
                 }
-            } 
+
+
+                //while (!Place_Finger.fingerOK) // not accounting for bad fingerprint
+                // code only proceeds if good fingerprint
+                //{
+                //MessageBox.Show("Test", "TESt");
+                if (Place_Finger.fingerOK) // not accounting for bad fingerprint
+                {
+                    Variables.serialBluetooth.Write("Add Credential%");
+                    Variables.serialBluetooth.Write(siteName + ":");
+                    Variables.serialBluetooth.Write(userName + ":");
+                    Variables.serialBluetooth.Write(pwd + ":");
+                    //String incData = Variables.serialBluetooth.ReadLine();
+                    //MessageBox.Show(incData, "From BT through Variables class");
+                    // Close form once adding credential is complete
+                    this.Close();
+                    //break;
+                } // TO-DO: add else clause for fingerprint auth failing
+                //}
+            }
             else // If password was not confirmed, prevent user from proceeding until it matches
             {
                 MessageBox.Show("Please confirm your password. \nPasswords did not match.", "Password Confirmation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

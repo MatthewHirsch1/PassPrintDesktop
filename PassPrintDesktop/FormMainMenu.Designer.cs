@@ -85,6 +85,7 @@
             this.btnRemoveFP.TabIndex = 3;
             this.btnRemoveFP.Text = "Remove a Fingerprint";
             this.btnRemoveFP.UseVisualStyleBackColor = true;
+            this.btnRemoveFP.Click += new System.EventHandler(this.btnRemoveFP_Click);
             // 
             // btnAddCred
             // 

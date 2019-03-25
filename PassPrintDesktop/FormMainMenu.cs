@@ -26,7 +26,13 @@ namespace PassPrintDesktop
 
         private void btnEditDelCred_Click(object sender, EventArgs e)
         {
-            new FormEditDelCred().Show();
+            using (Place_Finger form = new Place_Finger())
+            {
+                Place_Finger.fingerOK = false;
+                form.ShowDialog();
+            }
+            if (Place_Finger.fingerOK)
+            { new FormEditDelCred().Show(); }
         }
 
         private void btnConnectBT_Click(object sender, EventArgs e)
@@ -38,12 +44,26 @@ namespace PassPrintDesktop
 
         private void btnAddFP_Click(object sender, EventArgs e)
         {
-            new AddFP().Show();
+            using (Place_Finger form = new Place_Finger())
+            {
+                Place_Finger.fingerOK = false;
+                form.ShowDialog();
+            }
+            if (Place_Finger.fingerOK) { new AddFP().Show(); }
         }
 
         private void Btn_Authenticate_Click(object sender, EventArgs e)
         {
             new Place_Finger().Show();
+        }
+
+        private void btnRemoveFP_Click(object sender, EventArgs e)
+        {
+            using (Place_Finger form = new Place_Finger())
+            {
+                Place_Finger.fingerOK = false;
+                form.ShowDialog();
+            }
         }
     }
 }

@@ -77,16 +77,25 @@ namespace PassPrintDesktop
 
                     // TO-DO: Need auth FP for action
                     // TO-DO: Encrypt data before sending to Arduino
-                    new Place_Finger().Show(); // Authenticate action
-                    Variables.serialBluetooth.Write("Save Credential%");
-                    // Send old credential to be removed from file
-                    Variables.serialBluetooth.Write(cred[0] + ":");
-                    Variables.serialBluetooth.Write(cred[1] + ":");
-                    Variables.serialBluetooth.Write(cred[2] + ":");
-                    // Send new credential to be added to file
-                    Variables.serialBluetooth.Write((string)dataGridViewCreds[0, e.RowIndex].Value + ":");
-                    Variables.serialBluetooth.Write((string)dataGridViewCreds[1, e.RowIndex].Value + ":");
-                    Variables.serialBluetooth.Write((string)dataGridViewCreds[2, e.RowIndex].Value + ":");
+                    //new Place_Finger().Show(); // Authenticate action
+                    using (Place_Finger form = new Place_Finger())
+                    {
+                        Place_Finger.fingerOK = false;
+                        form.ShowDialog();
+                    }
+                    //new Place_Finger().Show(); // Authenticate action
+                    if (Place_Finger.fingerOK) // not accounting for bad fingerprint
+                    {
+                        Variables.serialBluetooth.Write("Save Credential%");
+                        // Send old credential to be removed from file
+                        Variables.serialBluetooth.Write(cred[0] + ":");
+                        Variables.serialBluetooth.Write(cred[1] + ":");
+                        Variables.serialBluetooth.Write(cred[2] + ":");
+                        // Send new credential to be added to file
+                        Variables.serialBluetooth.Write((string)dataGridViewCreds[0, e.RowIndex].Value + ":");
+                        Variables.serialBluetooth.Write((string)dataGridViewCreds[1, e.RowIndex].Value + ":");
+                        Variables.serialBluetooth.Write((string)dataGridViewCreds[2, e.RowIndex].Value + ":");
+                    }
 
                 }
                 else // Delete column
@@ -94,12 +103,20 @@ namespace PassPrintDesktop
                     // TO-DO: Need auth FP for action
                     //MessageBox.Show("Delete: Button on row " + e.RowIndex + " clicked\n" + senderGrid.Columns, "Test Delete");
                     string[] cred = credList[e.RowIndex];
-                    new Place_Finger().Show(); // Authenticate action
-                    Variables.serialBluetooth.Write("Delete Credential%");
-                    Variables.serialBluetooth.Write(cred[0] + ":");
-                    Variables.serialBluetooth.Write(cred[1] + ":");
-                    Variables.serialBluetooth.Write(cred[2] + ":");
-                    this.dataGridViewCreds.Rows.RemoveAt(e.RowIndex);
+                    using (Place_Finger form = new Place_Finger())
+                    {
+                        Place_Finger.fingerOK = false;
+                        form.ShowDialog();
+                    }
+                    //new Place_Finger().Show(); // Authenticate action
+                    if (Place_Finger.fingerOK) // not accounting for bad fingerprint
+                    {
+                        Variables.serialBluetooth.Write("Delete Credential%");
+                        Variables.serialBluetooth.Write(cred[0] + ":");
+                        Variables.serialBluetooth.Write(cred[1] + ":");
+                        Variables.serialBluetooth.Write(cred[2] + ":");
+                        this.dataGridViewCreds.Rows.RemoveAt(e.RowIndex);
+                    }
                 }
             }
         }
