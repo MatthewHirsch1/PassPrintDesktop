@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using System.Threading;
 
 namespace PassPrintDesktop
 {
@@ -80,14 +81,34 @@ namespace PassPrintDesktop
                 // TO-DO: Remove Asterisk (*) from the 4 labels' Text elements after Auth is done
                 // TO-DO: reset lblRequiredFields after Auth is done
 
-                Variables.serialBluetooth.Write("Add Credential%");
-                Variables.serialBluetooth.Write(siteName + ":");
-                Variables.serialBluetooth.Write(userName + ":");
-                Variables.serialBluetooth.Write(pwd + ":");
-                //String incData = Variables.serialBluetooth.ReadLine();
-                //MessageBox.Show(incData, "From BT through Variables class");
-                // Close form once adding credential is complete
-                this.Close();
+
+                new Place_Finger().Show();// Authenticate action
+                                          //bool fingerOK = Place_Finger.Begin_Click();
+
+                int milliseconds = 2000;
+                Thread.Sleep(milliseconds);
+                //using (var form = new Place_Finger())
+                //{
+                //    bool fingerOK = form.fingerOK''
+                //}
+
+                while (!Place_Finger.fingerOK) // not accounting for bad fingerprint
+                    // code only proceeds if good fingerprint
+                {
+                    if (Place_Finger.fingerOK)
+                    {
+
+                        Variables.serialBluetooth.Write("Add Credential%");
+                        Variables.serialBluetooth.Write(siteName + ":");
+                        Variables.serialBluetooth.Write(userName + ":");
+                        Variables.serialBluetooth.Write(pwd + ":");
+                        //String incData = Variables.serialBluetooth.ReadLine();
+                        //MessageBox.Show(incData, "From BT through Variables class");
+                        // Close form once adding credential is complete
+                        this.Close();
+                        break;
+                    } // TO-DO: add else clause for fingerprint auth failing
+                }
             } 
             else // If password was not confirmed, prevent user from proceeding until it matches
             {

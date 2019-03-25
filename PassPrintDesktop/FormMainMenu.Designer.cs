@@ -36,6 +36,7 @@
             this.btnEditDelCred = new System.Windows.Forms.Button();
             this.btnConnectBT = new System.Windows.Forms.Button();
             this.lblConnectSuccess = new System.Windows.Forms.Label();
+            this.Btn_Authenticate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -131,11 +132,24 @@
             this.lblConnectSuccess.Size = new System.Drawing.Size(0, 38);
             this.lblConnectSuccess.TabIndex = 7;
             // 
+            // Btn_Authenticate
+            // 
+            this.Btn_Authenticate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Authenticate.Location = new System.Drawing.Point(449, 426);
+            this.Btn_Authenticate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Btn_Authenticate.Name = "Btn_Authenticate";
+            this.Btn_Authenticate.Size = new System.Drawing.Size(294, 60);
+            this.Btn_Authenticate.TabIndex = 8;
+            this.Btn_Authenticate.Text = "Authenticate";
+            this.Btn_Authenticate.UseVisualStyleBackColor = true;
+            this.Btn_Authenticate.Click += new System.EventHandler(this.Btn_Authenticate_Click);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 514);
+            this.Controls.Add(this.Btn_Authenticate);
             this.Controls.Add(this.lblConnectSuccess);
             this.Controls.Add(this.btnConnectBT);
             this.Controls.Add(this.btnEditDelCred);
@@ -161,6 +175,7 @@
         private System.Windows.Forms.Button btnEditDelCred;
         private System.Windows.Forms.Button btnConnectBT;
         private System.Windows.Forms.Label lblConnectSuccess;
+        private System.Windows.Forms.Button Btn_Authenticate;
     }
 }
 

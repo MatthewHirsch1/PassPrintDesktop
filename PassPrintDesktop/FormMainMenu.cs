@@ -40,5 +40,10 @@ namespace PassPrintDesktop
         {
             new AddFP().Show();
         }
+
+        private void Btn_Authenticate_Click(object sender, EventArgs e)
+        {
+            new Place_Finger().Show();
+        }
     }
 }

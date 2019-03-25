@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO.Ports;
 
 namespace PassPrintDesktop
 {
@@ -41,7 +40,7 @@ namespace PassPrintDesktop
             {
                 numCreds = Int32.Parse(strCreds);
             }
-            catch(Exception) { MessageBox.Show("String: " + strCreds, "test"); }
+            catch (Exception) { MessageBox.Show("String: " + strCreds, "test"); }
             //string num2 = "";
             //MessageBox.Show("String: " + strCreds + "\nint: " + numCreds, "test");
             //int num = 1;
@@ -69,7 +68,8 @@ namespace PassPrintDesktop
 
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
             {
-                if (e.ColumnIndex == 3) { // Save column
+                if (e.ColumnIndex == 3)
+                { // Save column
                     //MessageBox.Show("Save Changes: Button on row " + e.RowIndex + " clicked\n" + (string)dataGridViewCreds[0, e.RowIndex].Value, "Test Save Changes");
                     string[] cred = credList[e.RowIndex];
                     //MessageBox.Show("OLD: " + cred[0] + ":" + cred[1] + ":" + cred[2] + ":\n" + "NEW: " + (string)dataGridViewCreds[0, e.RowIndex].Value + ":" + (string)dataGridViewCreds[1, e.RowIndex].Value + ":" + (string)dataGridViewCreds[2, e.RowIndex].Value + ":", "test");
@@ -77,6 +77,7 @@ namespace PassPrintDesktop
 
                     // TO-DO: Need auth FP for action
                     // TO-DO: Encrypt data before sending to Arduino
+                    new Place_Finger().Show(); // Authenticate action
                     Variables.serialBluetooth.Write("Save Credential%");
                     // Send old credential to be removed from file
                     Variables.serialBluetooth.Write(cred[0] + ":");
@@ -93,6 +94,7 @@ namespace PassPrintDesktop
                     // TO-DO: Need auth FP for action
                     //MessageBox.Show("Delete: Button on row " + e.RowIndex + " clicked\n" + senderGrid.Columns, "Test Delete");
                     string[] cred = credList[e.RowIndex];
+                    new Place_Finger().Show(); // Authenticate action
                     Variables.serialBluetooth.Write("Delete Credential%");
                     Variables.serialBluetooth.Write(cred[0] + ":");
                     Variables.serialBluetooth.Write(cred[1] + ":");
@@ -108,7 +110,7 @@ namespace PassPrintDesktop
             {
                 dataGridViewCreds.Rows[e.RowIndex].Tag = e.Value;
                 e.Value = new String('\u25CF', e.Value.ToString().Length);
-            }     
+            }
         }
 
         private void dataGridViewCreds_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
