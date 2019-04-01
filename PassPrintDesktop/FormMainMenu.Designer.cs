@@ -95,7 +95,7 @@
             this.btnAddCred.Name = "btnAddCred";
             this.btnAddCred.Size = new System.Drawing.Size(436, 60);
             this.btnAddCred.TabIndex = 4;
-            this.btnAddCred.Text = "Add Credential";
+            this.btnAddCred.Text = "Add Account";
             this.btnAddCred.UseVisualStyleBackColor = true;
             this.btnAddCred.Click += new System.EventHandler(this.btnAddCred_Click);
             // 
@@ -107,7 +107,7 @@
             this.btnEditDelCred.Name = "btnEditDelCred";
             this.btnEditDelCred.Size = new System.Drawing.Size(436, 60);
             this.btnEditDelCred.TabIndex = 5;
-            this.btnEditDelCred.Text = "Edit / Delete Credentials";
+            this.btnEditDelCred.Text = "Edit / Delete Accounts";
             this.btnEditDelCred.UseVisualStyleBackColor = true;
             this.btnEditDelCred.Click += new System.EventHandler(this.btnEditDelCred_Click);
             // 

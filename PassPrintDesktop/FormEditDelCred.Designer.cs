@@ -45,12 +45,12 @@
             // 
             // lblManageCreds
             // 
-            this.lblManageCreds.Font = new System.Drawing.Font("Arial Unicode MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManageCreds.Location = new System.Drawing.Point(320, 19);
+            this.lblManageCreds.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblManageCreds.Location = new System.Drawing.Point(284, 15);
             this.lblManageCreds.Name = "lblManageCreds";
-            this.lblManageCreds.Size = new System.Drawing.Size(532, 61);
+            this.lblManageCreds.Size = new System.Drawing.Size(473, 49);
             this.lblManageCreds.TabIndex = 3;
-            this.lblManageCreds.Text = "Manage Your Credentials";
+            this.lblManageCreds.Text = "Manage Your Accounts";
             this.lblManageCreds.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dataGridViewCreds
@@ -60,7 +60,7 @@
             this.dataGridViewCreds.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -75,16 +75,17 @@
             this.colDelete});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCreds.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewCreds.Location = new System.Drawing.Point(12, 96);
+            this.dataGridViewCreds.Location = new System.Drawing.Point(11, 77);
+            this.dataGridViewCreds.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewCreds.Name = "dataGridViewCreds";
             this.dataGridViewCreds.RowTemplate.Height = 28;
-            this.dataGridViewCreds.Size = new System.Drawing.Size(1156, 639);
+            this.dataGridViewCreds.Size = new System.Drawing.Size(1028, 511);
             this.dataGridViewCreds.TabIndex = 11;
             this.dataGridViewCreds.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCreds_CellContentClick);
             this.dataGridViewCreds.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCreds_CellFormatting);
@@ -96,7 +97,7 @@
             this.colAccount.HeaderText = "Account";
             this.colAccount.Name = "colAccount";
             this.colAccount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAccount.Width = 114;
+            this.colAccount.Width = 97;
             // 
             // colUsername
             // 
@@ -104,7 +105,7 @@
             this.colUsername.HeaderText = "Username";
             this.colUsername.Name = "colUsername";
             this.colUsername.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colUsername.Width = 137;
+            this.colUsername.Width = 116;
             // 
             // colPassword
             // 
@@ -114,13 +115,13 @@
             this.colPassword.HeaderText = "Password";
             this.colPassword.Name = "colPassword";
             this.colPassword.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPassword.Width = 133;
+            this.colPassword.Width = 112;
             // 
             // colSave
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.YellowGreen;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Unicode MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             this.colSave.DefaultCellStyle = dataGridViewCellStyle3;
             this.colSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -145,11 +146,12 @@
             // 
             // FormEditDelCred
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 747);
+            this.ClientSize = new System.Drawing.Size(1049, 598);
             this.Controls.Add(this.dataGridViewCreds);
             this.Controls.Add(this.lblManageCreds);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormEditDelCred";
             this.Text = "PassPrint";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCreds)).EndInit();
