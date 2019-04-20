@@ -49,7 +49,7 @@ namespace PassPrintDesktop
                         
                         if (string.Equals(incData,"ok")) {
                             fingerOK = true;
-                            MessageBox.Show("Fingerprint Approved", "Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                            //MessageBox.Show("Fingerprint Approved", "Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         }
                         continue;
                     }

@@ -38,8 +38,8 @@
             this.lblConnectSuccess = new System.Windows.Forms.Label();
             this.Btn_Authenticate = new System.Windows.Forms.Button();
             this.btnStopServer = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnStartServer = new System.Windows.Forms.Button();
+            this.lblServerRunning = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -139,7 +139,7 @@
             // Btn_Authenticate
             // 
             this.Btn_Authenticate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Authenticate.Location = new System.Drawing.Point(44, 616);
+            this.Btn_Authenticate.Location = new System.Drawing.Point(523, 542);
             this.Btn_Authenticate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Authenticate.Name = "Btn_Authenticate";
             this.Btn_Authenticate.Size = new System.Drawing.Size(325, 58);
@@ -150,45 +150,32 @@
             // 
             // btnStopServer
             // 
-            this.btnStopServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStopServer.Location = new System.Drawing.Point(520, 616);
-            this.btnStopServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStopServer.Location = new System.Drawing.Point(0, 0);
             this.btnStopServer.Name = "btnStopServer";
-            this.btnStopServer.Size = new System.Drawing.Size(325, 58);
-            this.btnStopServer.TabIndex = 11;
-            this.btnStopServer.Text = "Stop Server";
-            this.btnStopServer.UseVisualStyleBackColor = true;
-            this.btnStopServer.Click += new System.EventHandler(this.btnStopServer_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.YellowGreen;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(851, 546);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 46);
-            this.label1.TabIndex = 10;
+            this.btnStopServer.Size = new System.Drawing.Size(75, 23);
+            this.btnStopServer.TabIndex = 1;
             // 
             // btnStartServer
             // 
-            this.btnStartServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartServer.Location = new System.Drawing.Point(520, 542);
-            this.btnStartServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStartServer.Location = new System.Drawing.Point(0, 0);
             this.btnStartServer.Name = "btnStartServer";
-            this.btnStartServer.Size = new System.Drawing.Size(325, 58);
-            this.btnStartServer.TabIndex = 9;
-            this.btnStartServer.Text = "Start Server";
-            this.btnStartServer.UseVisualStyleBackColor = true;
-            this.btnStartServer.Click += new System.EventHandler(this.btnStartServer_Click);
+            this.btnStartServer.Size = new System.Drawing.Size(75, 23);
+            this.btnStartServer.TabIndex = 2;
+            // 
+            // lblServerRunning
+            // 
+            this.lblServerRunning.Location = new System.Drawing.Point(0, 0);
+            this.lblServerRunning.Name = "lblServerRunning";
+            this.lblServerRunning.Size = new System.Drawing.Size(100, 23);
+            this.lblServerRunning.TabIndex = 0;
             // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 711);
+            this.ClientSize = new System.Drawing.Size(904, 641);
+            this.Controls.Add(this.lblServerRunning);
             this.Controls.Add(this.btnStopServer);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStartServer);
             this.Controls.Add(this.Btn_Authenticate);
             this.Controls.Add(this.lblConnectSuccess);
@@ -202,6 +189,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMainMenu";
             this.Text = "PassPrint";
+            this.Shown += new System.EventHandler(this.FormMainMenu_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,8 +206,8 @@
         private System.Windows.Forms.Label lblConnectSuccess;
         private System.Windows.Forms.Button Btn_Authenticate;
         private System.Windows.Forms.Button btnStopServer;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnStartServer;
+        private System.Windows.Forms.Label lblServerRunning;
     }
 }
 

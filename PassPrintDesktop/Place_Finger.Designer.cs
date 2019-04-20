@@ -28,67 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Begin = new System.Windows.Forms.Button();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lblPlace = new System.Windows.Forms.Label();
+            this.picboxFP = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picboxFP)).BeginInit();
             this.SuspendLayout();
             // 
-            // Begin
+            // lblPlace
             // 
-            this.Begin.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.86207F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Begin.Location = new System.Drawing.Point(321, 335);
-            this.Begin.Name = "Begin";
-            this.Begin.Size = new System.Drawing.Size(140, 87);
-            this.Begin.TabIndex = 7;
-            this.Begin.Text = "Begin";
-            this.Begin.UseVisualStyleBackColor = true;
-            this.Begin.Click += new System.EventHandler(this.Begin_Click);
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(91, 29);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(619, 44);
-            this.lblWelcome.TabIndex = 6;
-            this.lblWelcome.Text = "Place finger on fingerprint scanner";
-            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlace.AutoSize = true;
+            this.lblPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlace.Location = new System.Drawing.Point(102, 36);
+            this.lblPlace.Name = "lblPlace";
+            this.lblPlace.Size = new System.Drawing.Size(755, 55);
+            this.lblPlace.TabIndex = 6;
+            this.lblPlace.Text = "Place finger on fingerprint scanner";
+            this.lblPlace.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // picboxFP
             // 
-            this.pictureBox1.Image = global::PassPrintDesktop.Properties.Resources.fingerprint;
-            this.pictureBox1.Location = new System.Drawing.Point(167, 96);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(450, 223);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.picboxFP.Image = global::PassPrintDesktop.Properties.Resources.fingerprint;
+            this.picboxFP.Location = new System.Drawing.Point(188, 120);
+            this.picboxFP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.picboxFP.Name = "picboxFP";
+            this.picboxFP.Size = new System.Drawing.Size(515, 322);
+            this.picboxFP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxFP.TabIndex = 5;
+            this.picboxFP.TabStop = false;
             // 
             // Place_Finger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Begin);
-            this.Controls.Add(this.lblWelcome);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(918, 497);
+            this.Controls.Add(this.lblPlace);
+            this.Controls.Add(this.picboxFP);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Place_Finger";
             this.Text = "Place_Finger";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Shown += new System.EventHandler(this.Place_Finger_Shown);
+            ((System.ComponentModel.ISupportInitialize)(this.picboxFP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button Begin;
-        private System.Windows.Forms.Label lblWelcome;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblPlace;
+        private System.Windows.Forms.PictureBox picboxFP;
     }
 }

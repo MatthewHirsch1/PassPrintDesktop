@@ -92,19 +92,19 @@ namespace PassPrintDesktop
                 //    bool fingerOK = form.fingerOK''
                 //}
 
-                using (Place_Finger form = new Place_Finger())
-                {
-                    Place_Finger.fingerOK = false;
-                    form.ShowDialog();
-                }
+                //using (Place_Finger form = new Place_Finger())
+                //{
+                //    Place_Finger.fingerOK = false;
+                //    form.ShowDialog();
+                //}
 
 
                 //while (!Place_Finger.fingerOK) // not accounting for bad fingerprint
                 // code only proceeds if good fingerprint
                 //{
                 //MessageBox.Show("Test", "TESt");
-                if (Place_Finger.fingerOK) // not accounting for bad fingerprint
-                {
+                //if (Place_Finger.fingerOK) // not accounting for bad fingerprint
+                //{
                     Variables.serialBluetooth.Write("Add Credential%");
                     Variables.serialBluetooth.Write(siteName + ":");
                     Variables.serialBluetooth.Write(userName + ":");
@@ -114,7 +114,7 @@ namespace PassPrintDesktop
                     // Close form once adding credential is complete
                     this.Close();
                     //break;
-                } // TO-DO: add else clause for fingerprint auth failing
+                //} // TO-DO: add else clause for fingerprint auth failing
                 //}
             }
             else // If password was not confirmed, prevent user from proceeding until it matches

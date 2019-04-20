@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -21,20 +22,12 @@ namespace PassPrintDesktop
             fingerOK = false;
         }
 
-
-
-        private void Begin_Click(object sender, EventArgs e)
+        private void Place_Finger_Shown(object sender, EventArgs e)
         {
+            this.TopMost = true;
+            this.Refresh();
             fingerOK = Variables.authenticatefunc();
-            if (fingerOK)
-            {
-                this.Close();
-                //return Variables.authenticatefunc();
-
-            } // handle false case
-
-            //return Variables.authenticatefunc();
-
+            if (fingerOK) { this.Close(); }
         }
     }
 }
