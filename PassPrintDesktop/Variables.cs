@@ -11,7 +11,7 @@ namespace PassPrintDesktop
     public class Variables // Class used to store public variables accessible throughout the project
     {
         // Bluetooth connection to the Arduino
-        public static SerialPort serialBluetooth = new SerialPort("COM11", 9600)//outgoing
+        public static SerialPort serialBluetooth = new SerialPort("COM6", 9600)//outgoing
         {
             ReadTimeout = 2000,
             WriteTimeout = 2000
