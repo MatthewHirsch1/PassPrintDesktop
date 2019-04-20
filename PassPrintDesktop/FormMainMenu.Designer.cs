@@ -37,6 +37,9 @@
             this.btnConnectBT = new System.Windows.Forms.Button();
             this.lblConnectSuccess = new System.Windows.Forms.Label();
             this.Btn_Authenticate = new System.Windows.Forms.Button();
+            this.btnStopServer = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnStartServer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWelcome
@@ -46,9 +49,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(194, 9);
+            this.lblWelcome.Location = new System.Drawing.Point(218, 11);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(407, 44);
+            this.lblWelcome.Size = new System.Drawing.Size(495, 55);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome to PassPrint";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,9 +59,9 @@
             // lblMainMenu
             // 
             this.lblMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainMenu.Location = new System.Drawing.Point(283, 99);
+            this.lblMainMenu.Location = new System.Drawing.Point(318, 124);
             this.lblMainMenu.Name = "lblMainMenu";
-            this.lblMainMenu.Size = new System.Drawing.Size(233, 38);
+            this.lblMainMenu.Size = new System.Drawing.Size(262, 48);
             this.lblMainMenu.TabIndex = 1;
             this.lblMainMenu.Text = "Main Menu";
             this.lblMainMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,10 +69,10 @@
             // btnAddFP
             // 
             this.btnAddFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddFP.Location = new System.Drawing.Point(181, 139);
+            this.btnAddFP.Location = new System.Drawing.Point(204, 174);
             this.btnAddFP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddFP.Name = "btnAddFP";
-            this.btnAddFP.Size = new System.Drawing.Size(436, 60);
+            this.btnAddFP.Size = new System.Drawing.Size(490, 75);
             this.btnAddFP.TabIndex = 2;
             this.btnAddFP.Text = "Add a Fingerprint";
             this.btnAddFP.UseVisualStyleBackColor = true;
@@ -78,10 +81,10 @@
             // btnRemoveFP
             // 
             this.btnRemoveFP.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemoveFP.Location = new System.Drawing.Point(181, 204);
+            this.btnRemoveFP.Location = new System.Drawing.Point(204, 255);
             this.btnRemoveFP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemoveFP.Name = "btnRemoveFP";
-            this.btnRemoveFP.Size = new System.Drawing.Size(436, 60);
+            this.btnRemoveFP.Size = new System.Drawing.Size(490, 75);
             this.btnRemoveFP.TabIndex = 3;
             this.btnRemoveFP.Text = "Remove a Fingerprint";
             this.btnRemoveFP.UseVisualStyleBackColor = true;
@@ -90,10 +93,10 @@
             // btnAddCred
             // 
             this.btnAddCred.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddCred.Location = new System.Drawing.Point(181, 269);
+            this.btnAddCred.Location = new System.Drawing.Point(204, 336);
             this.btnAddCred.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCred.Name = "btnAddCred";
-            this.btnAddCred.Size = new System.Drawing.Size(436, 60);
+            this.btnAddCred.Size = new System.Drawing.Size(490, 75);
             this.btnAddCred.TabIndex = 4;
             this.btnAddCred.Text = "Add Credential";
             this.btnAddCred.UseVisualStyleBackColor = true;
@@ -102,10 +105,10 @@
             // btnEditDelCred
             // 
             this.btnEditDelCred.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditDelCred.Location = new System.Drawing.Point(181, 334);
+            this.btnEditDelCred.Location = new System.Drawing.Point(204, 418);
             this.btnEditDelCred.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditDelCred.Name = "btnEditDelCred";
-            this.btnEditDelCred.Size = new System.Drawing.Size(436, 60);
+            this.btnEditDelCred.Size = new System.Drawing.Size(490, 75);
             this.btnEditDelCred.TabIndex = 5;
             this.btnEditDelCred.Text = "Edit / Delete Credentials";
             this.btnEditDelCred.UseVisualStyleBackColor = true;
@@ -114,10 +117,10 @@
             // btnConnectBT
             // 
             this.btnConnectBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnectBT.Location = new System.Drawing.Point(39, 434);
+            this.btnConnectBT.Location = new System.Drawing.Point(44, 542);
             this.btnConnectBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConnectBT.Name = "btnConnectBT";
-            this.btnConnectBT.Size = new System.Drawing.Size(289, 46);
+            this.btnConnectBT.Size = new System.Drawing.Size(325, 58);
             this.btnConnectBT.TabIndex = 6;
             this.btnConnectBT.Text = "Connect Bluetooth";
             this.btnConnectBT.UseVisualStyleBackColor = true;
@@ -128,28 +131,65 @@
             this.lblConnectSuccess.AutoSize = true;
             this.lblConnectSuccess.BackColor = System.Drawing.Color.YellowGreen;
             this.lblConnectSuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConnectSuccess.Location = new System.Drawing.Point(333, 437);
+            this.lblConnectSuccess.Location = new System.Drawing.Point(375, 546);
             this.lblConnectSuccess.Name = "lblConnectSuccess";
-            this.lblConnectSuccess.Size = new System.Drawing.Size(0, 38);
+            this.lblConnectSuccess.Size = new System.Drawing.Size(0, 46);
             this.lblConnectSuccess.TabIndex = 7;
             // 
             // Btn_Authenticate
             // 
-            this.Btn_Authenticate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Authenticate.Location = new System.Drawing.Point(449, 426);
+            this.Btn_Authenticate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Authenticate.Location = new System.Drawing.Point(44, 616);
             this.Btn_Authenticate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Authenticate.Name = "Btn_Authenticate";
-            this.Btn_Authenticate.Size = new System.Drawing.Size(294, 60);
+            this.Btn_Authenticate.Size = new System.Drawing.Size(325, 58);
             this.Btn_Authenticate.TabIndex = 8;
             this.Btn_Authenticate.Text = "Authenticate";
             this.Btn_Authenticate.UseVisualStyleBackColor = true;
             this.Btn_Authenticate.Click += new System.EventHandler(this.Btn_Authenticate_Click);
             // 
+            // btnStopServer
+            // 
+            this.btnStopServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStopServer.Location = new System.Drawing.Point(520, 616);
+            this.btnStopServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStopServer.Name = "btnStopServer";
+            this.btnStopServer.Size = new System.Drawing.Size(325, 58);
+            this.btnStopServer.TabIndex = 11;
+            this.btnStopServer.Text = "Stop Server";
+            this.btnStopServer.UseVisualStyleBackColor = true;
+            this.btnStopServer.Click += new System.EventHandler(this.btnStopServer_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.YellowGreen;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(851, 546);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 46);
+            this.label1.TabIndex = 10;
+            // 
+            // btnStartServer
+            // 
+            this.btnStartServer.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStartServer.Location = new System.Drawing.Point(520, 542);
+            this.btnStartServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStartServer.Name = "btnStartServer";
+            this.btnStartServer.Size = new System.Drawing.Size(325, 58);
+            this.btnStartServer.TabIndex = 9;
+            this.btnStartServer.Text = "Start Server";
+            this.btnStartServer.UseVisualStyleBackColor = true;
+            this.btnStartServer.Click += new System.EventHandler(this.btnStartServer_Click);
+            // 
             // FormMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(766, 514);
+            this.ClientSize = new System.Drawing.Size(948, 711);
+            this.Controls.Add(this.btnStopServer);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnStartServer);
             this.Controls.Add(this.Btn_Authenticate);
             this.Controls.Add(this.lblConnectSuccess);
             this.Controls.Add(this.btnConnectBT);
@@ -177,6 +217,9 @@
         private System.Windows.Forms.Button btnConnectBT;
         private System.Windows.Forms.Label lblConnectSuccess;
         private System.Windows.Forms.Button Btn_Authenticate;
+        private System.Windows.Forms.Button btnStopServer;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnStartServer;
     }
 }
 
