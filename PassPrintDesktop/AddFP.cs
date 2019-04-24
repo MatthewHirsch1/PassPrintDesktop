@@ -27,45 +27,44 @@ namespace PassPrintDesktop
         private void Continue_Click(object sender, EventArgs e)
         {
             string finger_select = FingerSelect.SelectedItem.ToString();
+            if (finger_select != "Select Finger")
+            {
+                Variables.serialBluetooth.Write("Choose Fingerprint%");
+                // TO-DO: Add feedback so user knows to lift finger for adding FP
+                if (finger_select == "Left Thumb")
+                    Variables.serialBluetooth.Write("1%");
+                else if (finger_select == "Left Index")
+                    Variables.serialBluetooth.Write("2%");
+                else if (finger_select == "Left Middle")
+                    Variables.serialBluetooth.Write("3%");
+                else if (finger_select == "Left Ring")
+                    Variables.serialBluetooth.Write("4%");
+                else if (finger_select == "Left Pinky")
+                    Variables.serialBluetooth.Write("5%");
+                else if (finger_select == "Right Thumb")
+                    Variables.serialBluetooth.Write("6%");
+                else if (finger_select == "Right Index")
+                    Variables.serialBluetooth.Write("7%");
+                else if (finger_select == "Right Middle")
+                    Variables.serialBluetooth.Write("8%");
+                else if (finger_select == "Right Ring")
+                    Variables.serialBluetooth.Write("9%");
+                else if (finger_select == "Right Pinky")
+                    Variables.serialBluetooth.Write("10%");
+
+                //ctrl+k+c comment NOT AT SAME TIME
+                //ctrl+k+u uncomment NOT AT SAME TIME
+
+                //string incData = Variables.serialBluetooth.ReadLine();
+                //MessageBox.Show(incData, "From BT through Variables class");
+                //MessageBox.Show("NOT From BT through Variables class");
 
 
-
-            Variables.serialBluetooth.Write("Choose Fingerprint%");
-            // TO-DO: Add feedback so user knows to lift finger for adding FP
-            if (finger_select == "Left Thumb")
-                Variables.serialBluetooth.Write("1%");
-            else if (finger_select == "Left Index")
-                Variables.serialBluetooth.Write("2%");
-            else if (finger_select == "Left Middle")
-                Variables.serialBluetooth.Write("3%");
-            else if (finger_select == "Left Ring")
-                Variables.serialBluetooth.Write("4%");
-            else if (finger_select == "Left Pinky")
-                Variables.serialBluetooth.Write("5%");
-            else if (finger_select == "Right Thumb")
-                Variables.serialBluetooth.Write("6%");
-            else if (finger_select == "Right Index")
-                Variables.serialBluetooth.Write("7%");
-            else if (finger_select == "Right Middle")
-                Variables.serialBluetooth.Write("8%");
-            else if (finger_select == "Right Ring")
-                Variables.serialBluetooth.Write("9%");
-            else if (finger_select == "Right Pinky")
-                Variables.serialBluetooth.Write("10%");
-
-            //ctrl+k+c comment NOT AT SAME TIME
-            //ctrl+k+u uncomment NOT AT SAME TIME
-
-            //string incData = Variables.serialBluetooth.ReadLine();
-            //MessageBox.Show(incData, "From BT through Variables class");
-            //MessageBox.Show("NOT From BT through Variables class");
-
-
-            this.Hide();
-            var form2 = new AddFPStep2();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
-
+                this.Hide();
+                var form2 = new AddFPStep2();
+                form2.Closed += (s, args) => this.Close();
+                form2.Show();
+            }
         }
 
         private void Back_Click(object sender, EventArgs e)
