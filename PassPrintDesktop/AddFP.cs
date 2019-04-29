@@ -27,30 +27,34 @@ namespace PassPrintDesktop
         private void Continue_Click(object sender, EventArgs e)
         {
             string finger_select = FingerSelect.SelectedItem.ToString();
+            Console.WriteLine("Finger: " + finger_select);
             if (finger_select != "Select Finger")
             {
                 Variables.serialBluetooth.Write("Choose Fingerprint%");
-                // TO-DO: Add feedback so user knows to lift finger for adding FP
+                // TO-DO: Add feedback so user knows to lift finger for adding FP // Done
                 if (finger_select == "Left Thumb")
-                    Variables.serialBluetooth.Write("1%");
+                    Variables.serialBluetooth.WriteLine("0%");
                 else if (finger_select == "Left Index")
-                    Variables.serialBluetooth.Write("2%");
+                    Variables.serialBluetooth.WriteLine("1%");
                 else if (finger_select == "Left Middle")
-                    Variables.serialBluetooth.Write("3%");
+                    Variables.serialBluetooth.WriteLine("2%");
                 else if (finger_select == "Left Ring")
-                    Variables.serialBluetooth.Write("4%");
+                    Variables.serialBluetooth.WriteLine("3%");
                 else if (finger_select == "Left Pinky")
-                    Variables.serialBluetooth.Write("5%");
+                    Variables.serialBluetooth.WriteLine("4%");
                 else if (finger_select == "Right Thumb")
-                    Variables.serialBluetooth.Write("6%");
+                    Variables.serialBluetooth.WriteLine("5%");
                 else if (finger_select == "Right Index")
-                    Variables.serialBluetooth.Write("7%");
+                    Variables.serialBluetooth.WriteLine("6%");
                 else if (finger_select == "Right Middle")
-                    Variables.serialBluetooth.Write("8%");
+                    Variables.serialBluetooth.WriteLine("7%");
                 else if (finger_select == "Right Ring")
-                    Variables.serialBluetooth.Write("9%");
+                    Variables.serialBluetooth.WriteLine("8%");
                 else if (finger_select == "Right Pinky")
-                    Variables.serialBluetooth.Write("10%");
+                    Variables.serialBluetooth.WriteLine("9%");
+
+                string id = Variables.serialBluetooth.ReadLine();
+                Console.WriteLine("ID from Arduino: " + id);
 
                 //ctrl+k+c comment NOT AT SAME TIME
                 //ctrl+k+u uncomment NOT AT SAME TIME

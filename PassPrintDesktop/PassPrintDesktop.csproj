@@ -85,6 +85,12 @@
     <Compile Include="FormMainMenu.Designer.cs">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormRemoveFP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRemoveFP.Designer.cs">
+      <DependentUpon>FormRemoveFP.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSuccess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRemoveFP.resx">
+      <DependentUpon>FormRemoveFP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Place_Finger.resx">
       <DependentUpon>Place_Finger.cs</DependentUpon>

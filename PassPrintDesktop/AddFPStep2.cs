@@ -28,16 +28,16 @@ namespace PassPrintDesktop
             {
                 try
                 {
-                    string removeNotice = Variables.serialBluetooth.ReadLine();
-                    Console.WriteLine("Remove Notice: " + removeNotice.Trim());
-                    Console.WriteLine("String compare: " + string.Compare(removeNotice.Trim(), "stored"));
+                    string incData = Variables.serialBluetooth.ReadLine();
+                    Console.WriteLine("Remove Notice: " + incData.Trim());
+                    Console.WriteLine("String compare: " + string.Compare(incData.Trim(), "stored"));
 
-                    if (string.Compare(removeNotice.Trim(), "Remove finger") == 0)
+                    if (string.Compare(incData.Trim(), "Remove finger") == 0)
                     {
                         lblLift.Text += "Lift finger\nPlace finger again";
                     }
 
-                    if (string.Compare(removeNotice.Trim(), "No match") == 0)
+                    if (string.Compare(incData.Trim(), "No match") == 0)
                     {
                         MessageBox.Show("Fingers didn't match!", "Alert");
                         disconnectRequested = true;
@@ -45,7 +45,7 @@ namespace PassPrintDesktop
                         new AddFP().Show();
                     }
 
-                    if (string.Compare(removeNotice.Trim(), "stored") == 0)
+                    if (string.Compare(incData.Trim(), "stored") == 0)
                     {
                         disconnectRequested = true;
                         MessageBox.Show("Fingerprint Stored!", "Alert");

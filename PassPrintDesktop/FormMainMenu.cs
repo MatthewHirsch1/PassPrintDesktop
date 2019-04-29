@@ -63,7 +63,31 @@ namespace PassPrintDesktop
 
         private void btnRemoveFP_Click(object sender, EventArgs e)
         {
-            
+            bool canPass = true;
+            Variables.serialBluetooth.WriteLine("How Many Fingers%");
+            string strNum = Variables.serialBluetooth.ReadLine();
+            int intNum = 0;
+            try
+            {
+                intNum = Int32.Parse(strNum);
+            }
+            catch (Exception) { }
+            Console.WriteLine("Finger Count on RemoveFP click: " + intNum);
+            if (intNum < 2)
+            {
+                MessageBox.Show("You only have 1 fingerprint stored.\nPlease add another fingerprint before proceeding.", "Remove Fignerprint Warning");
+                canPass = false;
+            }
+            if (canPass)
+            {
+                using (Place_Finger form = new Place_Finger())
+                {
+                    Place_Finger.fingerOK = false;
+                    form.ShowDialog();
+                }
+                if (Place_Finger.fingerOK) { new FormRemoveFP().Show(); }
+                //new FormRemoveFP().Show();
+            }
         }
         
         private int runServer() // Code that runs server
