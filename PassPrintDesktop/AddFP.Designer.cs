@@ -42,9 +42,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(286, 62);
+            this.lblWelcome.Location = new System.Drawing.Point(322, 78);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(481, 44);
+            this.lblWelcome.Size = new System.Drawing.Size(586, 55);
             this.lblWelcome.TabIndex = 2;
             this.lblWelcome.Text = "Ready to enroll fingerprint!";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -56,9 +56,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(121, 118);
+            this.label1.Location = new System.Drawing.Point(136, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(816, 44);
+            this.label1.Size = new System.Drawing.Size(996, 55);
             this.label1.TabIndex = 3;
             this.label1.Text = "Please select the finger you would like to add:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,25 +72,27 @@
             "Left Thumb",
             "Left Index",
             "Left Middle",
-            "Left Ring ",
+            "Left Ring",
             "Left Pinky",
             "Right Thumb",
             "Right Index",
             "Right Middle",
             "Right Ring",
             "Right Pinky"});
-            this.FingerSelect.SelectedIndex = 0;
-            this.FingerSelect.Location = new System.Drawing.Point(386, 205);
+            this.FingerSelect.Location = new System.Drawing.Point(434, 256);
+            this.FingerSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FingerSelect.Name = "FingerSelect";
-            this.FingerSelect.Size = new System.Drawing.Size(295, 37);
+            this.FingerSelect.Size = new System.Drawing.Size(331, 41);
             this.FingerSelect.TabIndex = 5;
+            this.FingerSelect.Text = "Select Finger";
             // 
             // Continue
             // 
             this.Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.7931F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Continue.Location = new System.Drawing.Point(620, 286);
+            this.Continue.Location = new System.Drawing.Point(698, 358);
+            this.Continue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Continue.Name = "Continue";
-            this.Continue.Size = new System.Drawing.Size(147, 43);
+            this.Continue.Size = new System.Drawing.Size(165, 54);
             this.Continue.TabIndex = 7;
             this.Continue.Text = "Continue";
             this.Continue.UseVisualStyleBackColor = true;
@@ -99,9 +101,10 @@
             // Back
             // 
             this.Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.7931F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Back.Location = new System.Drawing.Point(309, 286);
+            this.Back.Location = new System.Drawing.Point(348, 358);
+            this.Back.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(147, 43);
+            this.Back.Size = new System.Drawing.Size(165, 54);
             this.Back.TabIndex = 8;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = true;
@@ -109,14 +112,15 @@
             // 
             // AddFP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 490);
+            this.ClientSize = new System.Drawing.Size(1180, 612);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.Continue);
             this.Controls.Add(this.FingerSelect);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblWelcome);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddFP";
             this.Text = "AddFP";
             this.ResumeLayout(false);
