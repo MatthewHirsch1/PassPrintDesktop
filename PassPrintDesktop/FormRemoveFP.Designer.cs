@@ -122,8 +122,8 @@
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnContinue;
-        private System.Windows.Forms.ComboBox dropdownFingerSelect;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblWelcome;
+        public System.Windows.Forms.ComboBox dropdownFingerSelect;
     }
 }
