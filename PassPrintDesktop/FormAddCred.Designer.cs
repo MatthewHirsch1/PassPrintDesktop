@@ -44,7 +44,7 @@
             // lblAddCred
             // 
             this.lblAddCred.Font = new System.Drawing.Font("Arial Unicode MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddCred.Location = new System.Drawing.Point(272, 35);
+            this.lblAddCred.Location = new System.Drawing.Point(289, 35);
             this.lblAddCred.Name = "lblAddCred";
             this.lblAddCred.Size = new System.Drawing.Size(386, 48);
             this.lblAddCred.TabIndex = 2;
@@ -55,7 +55,7 @@
             // 
             this.txtAccountName.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAccountName.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtAccountName.Location = new System.Drawing.Point(383, 121);
+            this.txtAccountName.Location = new System.Drawing.Point(402, 121);
             this.txtAccountName.Name = "txtAccountName";
             this.txtAccountName.Size = new System.Drawing.Size(465, 45);
             this.txtAccountName.TabIndex = 3;
@@ -67,7 +67,7 @@
             // 
             this.txtUsername.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsername.Location = new System.Drawing.Point(383, 196);
+            this.txtUsername.Location = new System.Drawing.Point(402, 196);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(465, 45);
             this.txtUsername.TabIndex = 4;
@@ -78,7 +78,7 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(383, 273);
+            this.txtPassword.Location = new System.Drawing.Point(402, 273);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
             this.txtPassword.Size = new System.Drawing.Size(465, 45);
@@ -87,7 +87,7 @@
             // txtPasswordConfirm
             // 
             this.txtPasswordConfirm.Font = new System.Drawing.Font("Arial Unicode MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasswordConfirm.Location = new System.Drawing.Point(383, 349);
+            this.txtPasswordConfirm.Location = new System.Drawing.Point(402, 349);
             this.txtPasswordConfirm.Name = "txtPasswordConfirm";
             this.txtPasswordConfirm.PasswordChar = '•';
             this.txtPasswordConfirm.Size = new System.Drawing.Size(465, 45);
@@ -97,7 +97,7 @@
             // 
             this.lblAccountName.AutoSize = true;
             this.lblAccountName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccountName.Location = new System.Drawing.Point(100, 125);
+            this.lblAccountName.Location = new System.Drawing.Point(119, 125);
             this.lblAccountName.Name = "lblAccountName";
             this.lblAccountName.Size = new System.Drawing.Size(258, 37);
             this.lblAccountName.TabIndex = 7;
@@ -107,7 +107,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(194, 200);
+            this.lblUsername.Location = new System.Drawing.Point(213, 200);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(164, 37);
             this.lblUsername.TabIndex = 8;
@@ -117,7 +117,7 @@
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(200, 277);
+            this.lblPassword.Location = new System.Drawing.Point(219, 277);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(158, 37);
             this.lblPassword.TabIndex = 9;
@@ -127,7 +127,7 @@
             // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConfirmPassword.Location = new System.Drawing.Point(78, 353);
+            this.lblConfirmPassword.Location = new System.Drawing.Point(97, 353);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
             this.lblConfirmPassword.Size = new System.Drawing.Size(280, 37);
             this.lblConfirmPassword.TabIndex = 10;
@@ -136,7 +136,7 @@
             // btnOKAddCred
             // 
             this.btnOKAddCred.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOKAddCred.Location = new System.Drawing.Point(383, 468);
+            this.btnOKAddCred.Location = new System.Drawing.Point(393, 468);
             this.btnOKAddCred.Name = "btnOKAddCred";
             this.btnOKAddCred.Size = new System.Drawing.Size(178, 82);
             this.btnOKAddCred.TabIndex = 11;

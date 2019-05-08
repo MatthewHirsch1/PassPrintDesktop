@@ -38,7 +38,7 @@
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.7931F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(233, 409);
+            this.btnBack.Location = new System.Drawing.Point(354, 345);
             this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(165, 54);
@@ -50,7 +50,7 @@
             // btnContinue
             // 
             this.btnContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.7931F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinue.Location = new System.Drawing.Point(583, 409);
+            this.btnContinue.Location = new System.Drawing.Point(608, 345);
             this.btnContinue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(165, 54);
@@ -65,7 +65,7 @@
             this.dropdownFingerSelect.FormattingEnabled = true;
             this.dropdownFingerSelect.Items.AddRange(new object[] {
             "Select Finger"});
-            this.dropdownFingerSelect.Location = new System.Drawing.Point(319, 307);
+            this.dropdownFingerSelect.Location = new System.Drawing.Point(398, 254);
             this.dropdownFingerSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dropdownFingerSelect.Name = "dropdownFingerSelect";
             this.dropdownFingerSelect.Size = new System.Drawing.Size(331, 41);
@@ -79,7 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(21, 199);
+            this.label1.Location = new System.Drawing.Point(25, 150);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1076, 55);
             this.label1.TabIndex = 10;
@@ -93,7 +93,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(207, 129);
+            this.lblWelcome.Location = new System.Drawing.Point(263, 80);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(600, 55);
             this.lblWelcome.TabIndex = 9;
@@ -104,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 593);
+            this.ClientSize = new System.Drawing.Size(1126, 489);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.dropdownFingerSelect);

@@ -35,6 +35,7 @@ namespace PassPrintDesktop
             //    //this.Close();
             //}
             string strCreds = Variables.serialBluetooth.ReadLine();
+            Console.WriteLine("Num creds from Arduino: " + strCreds);
             int numCreds = 0;
             try
             {

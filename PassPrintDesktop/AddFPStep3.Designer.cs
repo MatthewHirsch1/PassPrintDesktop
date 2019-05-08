@@ -41,9 +41,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(218, 78);
+            this.lblWelcome.Location = new System.Drawing.Point(240, 98);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(346, 44);
+            this.lblWelcome.Size = new System.Drawing.Size(421, 55);
             this.lblWelcome.TabIndex = 4;
             this.lblWelcome.Text = "Fingerprint Stored!";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -55,9 +55,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.86207F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(82, 152);
+            this.label1.Location = new System.Drawing.Point(60, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(628, 37);
+            this.label1.Size = new System.Drawing.Size(781, 46);
             this.label1.TabIndex = 5;
             this.label1.Text = "Would you like to store another fingerprint?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -65,9 +65,10 @@
             // No
             // 
             this.No.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.13793F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.No.Location = new System.Drawing.Point(476, 268);
+            this.No.Location = new System.Drawing.Point(520, 335);
+            this.No.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.No.Name = "No";
-            this.No.Size = new System.Drawing.Size(161, 67);
+            this.No.Size = new System.Drawing.Size(181, 84);
             this.No.TabIndex = 6;
             this.No.Text = "No";
             this.No.UseVisualStyleBackColor = true;
@@ -76,10 +77,11 @@
             // Yes
             // 
             this.Yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.13793F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Yes.Location = new System.Drawing.Point(148, 268);
+            this.Yes.Location = new System.Drawing.Point(200, 335);
+            this.Yes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Yes.Name = "Yes";
             this.Yes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Yes.Size = new System.Drawing.Size(161, 67);
+            this.Yes.Size = new System.Drawing.Size(181, 84);
             this.Yes.TabIndex = 7;
             this.Yes.Text = "Yes";
             this.Yes.UseVisualStyleBackColor = true;
@@ -87,13 +89,14 @@
             // 
             // AddFPStep3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
             this.Controls.Add(this.Yes);
             this.Controls.Add(this.No);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblWelcome);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "AddFPStep3";
             this.Text = "AddFPStep3";
             this.ResumeLayout(false);

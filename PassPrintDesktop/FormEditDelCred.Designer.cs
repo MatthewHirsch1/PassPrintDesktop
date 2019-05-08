@@ -46,7 +46,7 @@
             // lblManageCreds
             // 
             this.lblManageCreds.Font = new System.Drawing.Font("Arial Unicode MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManageCreds.Location = new System.Drawing.Point(320, 19);
+            this.lblManageCreds.Location = new System.Drawing.Point(449, 19);
             this.lblManageCreds.Name = "lblManageCreds";
             this.lblManageCreds.Size = new System.Drawing.Size(532, 61);
             this.lblManageCreds.TabIndex = 3;
@@ -84,7 +84,7 @@
             this.dataGridViewCreds.Location = new System.Drawing.Point(12, 96);
             this.dataGridViewCreds.Name = "dataGridViewCreds";
             this.dataGridViewCreds.RowTemplate.Height = 28;
-            this.dataGridViewCreds.Size = new System.Drawing.Size(1156, 639);
+            this.dataGridViewCreds.Size = new System.Drawing.Size(1406, 742);
             this.dataGridViewCreds.TabIndex = 11;
             this.dataGridViewCreds.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCreds_CellContentClick);
             this.dataGridViewCreds.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewCreds_CellFormatting);
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 747);
+            this.ClientSize = new System.Drawing.Size(1430, 850);
             this.Controls.Add(this.dataGridViewCreds);
             this.Controls.Add(this.lblManageCreds);
             this.Name = "FormEditDelCred";

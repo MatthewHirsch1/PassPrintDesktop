@@ -24,61 +24,64 @@ namespace PassPrintDesktop
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-            string finger_select = dropdownFingerSelect.SelectedItem.ToString();
-            if (finger_select != "Select Finger")
+            try
             {
-                Variables.serialBluetooth.Write("Remove Fingerprint%");
-                // TO-DO: Add feedback so user knows to lift finger for adding FP // Done
-                if (finger_select == "Left Thumb")
-                    Variables.serialBluetooth.Write("0%");
-                else if (finger_select == "Left Index")
-                    Variables.serialBluetooth.Write("1%");
-                else if (finger_select == "Left Middle")
-                    Variables.serialBluetooth.Write("2%");
-                else if (finger_select == "Left Ring")
-                    Variables.serialBluetooth.Write("3%");
-                else if (finger_select == "Left Pinky")
-                    Variables.serialBluetooth.Write("4%");
-                else if (finger_select == "Right Thumb")
-                    Variables.serialBluetooth.Write("5%");
-                else if (finger_select == "Right Index")
-                    Variables.serialBluetooth.Write("6%");
-                else if (finger_select == "Right Middle")
-                    Variables.serialBluetooth.Write("7%");
-                else if (finger_select == "Right Ring")
-                    Variables.serialBluetooth.Write("8%");
-                else if (finger_select == "Right Pinky")
-                    Variables.serialBluetooth.Write("9%");
+                string finger_select = dropdownFingerSelect.SelectedItem.ToString();
+                if (finger_select != "Select Finger")
+                {
+                    Variables.serialBluetooth.Write("Remove Fingerprint%");
+                    // TO-DO: Add feedback so user knows to lift finger for adding FP // Done
+                    if (finger_select == "Left Thumb")
+                        Variables.serialBluetooth.Write("0%");
+                    else if (finger_select == "Left Index")
+                        Variables.serialBluetooth.Write("1%");
+                    else if (finger_select == "Left Middle")
+                        Variables.serialBluetooth.Write("2%");
+                    else if (finger_select == "Left Ring")
+                        Variables.serialBluetooth.Write("3%");
+                    else if (finger_select == "Left Pinky")
+                        Variables.serialBluetooth.Write("4%");
+                    else if (finger_select == "Right Thumb")
+                        Variables.serialBluetooth.Write("5%");
+                    else if (finger_select == "Right Index")
+                        Variables.serialBluetooth.Write("6%");
+                    else if (finger_select == "Right Middle")
+                        Variables.serialBluetooth.Write("7%");
+                    else if (finger_select == "Right Ring")
+                        Variables.serialBluetooth.Write("8%");
+                    else if (finger_select == "Right Pinky")
+                        Variables.serialBluetooth.Write("9%");
 
-                //ctrl+k+c comment NOT AT SAME TIME
-                //ctrl+k+u uncomment NOT AT SAME TIME
+                    //ctrl+k+c comment NOT AT SAME TIME
+                    //ctrl+k+u uncomment NOT AT SAME TIME
 
-                //string incData = Variables.serialBluetooth.ReadLine();
-                //MessageBox.Show(incData, "From BT through Variables class");
-                //MessageBox.Show("NOT From BT through Variables class");
+                    //string incData = Variables.serialBluetooth.ReadLine();
+                    //MessageBox.Show(incData, "From BT through Variables class");
+                    //MessageBox.Show("NOT From BT through Variables class");
 
-                this.Close();
-                //this.Hide();
-                //var form2 = new Place_Finger();
-                //form2.Closed += (s, args) => this.Close();
-                //form2.Show();
-                //new Place_Finger().Show();
-                //using (Place_Finger form = new Place_Finger())
-                //{
-                //    Place_Finger.fingerOK = false;
-                //    form.ShowDialog();
-                //}
-                //if (Place_Finger.fingerOK)
-                //{
-                //string deleteInfo = Variables.serialBluetooth.ReadLine();
-                //    Console.WriteLine("Delete Info: ", deleteInfo);
-                //    if (string.Compare(deleteInfo.Trim(), "Deleted") == 0)
-                //    {
-                //        MessageBox.Show("Finger Deleted Successfully", "Alert");
-                //        this.Close();
-                //    }
-                //}
-            }
+                    this.Close();
+                    //this.Hide();
+                    //var form2 = new Place_Finger();
+                    //form2.Closed += (s, args) => this.Close();
+                    //form2.Show();
+                    //new Place_Finger().Show();
+                    //using (Place_Finger form = new Place_Finger())
+                    //{
+                    //    Place_Finger.fingerOK = false;
+                    //    form.ShowDialog();
+                    //}
+                    //if (Place_Finger.fingerOK)
+                    //{
+                    //string deleteInfo = Variables.serialBluetooth.ReadLine();
+                    //    Console.WriteLine("Delete Info: ", deleteInfo);
+                    //    if (string.Compare(deleteInfo.Trim(), "Deleted") == 0)
+                    //    {
+                    //        MessageBox.Show("Finger Deleted Successfully", "Alert");
+                    //        this.Close();
+                    //    }
+                    //}
+                }
+            } catch { }
         }
 
         private void FormRemoveFP_Load(object sender, EventArgs e)

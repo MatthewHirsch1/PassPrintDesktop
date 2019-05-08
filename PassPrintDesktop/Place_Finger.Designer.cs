@@ -40,7 +40,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPlace.AutoSize = true;
             this.lblPlace.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlace.Location = new System.Drawing.Point(102, 36);
+            this.lblPlace.Location = new System.Drawing.Point(82, 36);
             this.lblPlace.Name = "lblPlace";
             this.lblPlace.Size = new System.Drawing.Size(755, 55);
             this.lblPlace.TabIndex = 6;
@@ -50,7 +50,7 @@
             // picboxFP
             // 
             this.picboxFP.Image = global::PassPrintDesktop.Properties.Resources.fingerprint;
-            this.picboxFP.Location = new System.Drawing.Point(188, 120);
+            this.picboxFP.Location = new System.Drawing.Point(202, 120);
             this.picboxFP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picboxFP.Name = "picboxFP";
             this.picboxFP.Size = new System.Drawing.Size(515, 322);

@@ -49,7 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(218, 11);
+            this.lblWelcome.Location = new System.Drawing.Point(205, 11);
             this.lblWelcome.Name = "lblWelcome";
             this.lblWelcome.Size = new System.Drawing.Size(495, 55);
             this.lblWelcome.TabIndex = 0;
@@ -59,7 +59,7 @@
             // lblMainMenu
             // 
             this.lblMainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMainMenu.Location = new System.Drawing.Point(318, 124);
+            this.lblMainMenu.Location = new System.Drawing.Point(321, 124);
             this.lblMainMenu.Name = "lblMainMenu";
             this.lblMainMenu.Size = new System.Drawing.Size(262, 48);
             this.lblMainMenu.TabIndex = 1;
@@ -117,7 +117,7 @@
             // btnConnectBT
             // 
             this.btnConnectBT.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConnectBT.Location = new System.Drawing.Point(44, 542);
+            this.btnConnectBT.Location = new System.Drawing.Point(47, 542);
             this.btnConnectBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnConnectBT.Name = "btnConnectBT";
             this.btnConnectBT.Size = new System.Drawing.Size(325, 58);
@@ -139,7 +139,7 @@
             // Btn_Authenticate
             // 
             this.Btn_Authenticate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_Authenticate.Location = new System.Drawing.Point(523, 542);
+            this.Btn_Authenticate.Location = new System.Drawing.Point(533, 542);
             this.Btn_Authenticate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Authenticate.Name = "Btn_Authenticate";
             this.Btn_Authenticate.Size = new System.Drawing.Size(325, 58);
